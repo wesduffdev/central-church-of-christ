@@ -5,7 +5,6 @@ function getNextSunday9amCT() {
   const now = new Date();
   // Central Time offset (UTC-5 during daylight saving, UTC-6 otherwise)
   // For simplicity, use UTC-5 (CDT) for August
-  const ctOffset = -5;
   const utcNow = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
   let nextSunday = new Date(utcNow);
   nextSunday.setUTCDate(utcNow.getUTCDate() + ((7 - utcNow.getUTCDay()) % 7 || 7));
