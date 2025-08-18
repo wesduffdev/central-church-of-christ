@@ -42,14 +42,50 @@ const HeroSlider: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 w-full flex flex-col items-center justify-center text-center px-4">
         <h3 className="text-white font-bold tracking-widest text-lg mb-4 mt-8 uppercase" style={{letterSpacing: '0.15em'}}>PUT YOUR FAITH INTO ACTION</h3>
-        <div className="bg-red-600 px-8 py-4 rounded mb-6 inline-block">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">{slides[current].title === 'About' ? 'FAITH IN GOD' : slides[current].title.toUpperCase()}</h1>
+        <div key={current} className="w-full flex flex-col items-center">
+          <div
+            className="bg-red-600 px-8 py-4 rounded mb-6 inline-block"
+            style={{
+              animation: 'fadeSlideUp 1s',
+              opacity: 1,
+            }}
+          >
+            <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">{slides[current].title === 'About' ? 'FAITH IN GOD' : slides[current].title.toUpperCase()}</h1>
+          </div>
+          <p
+            className="text-white text-lg md:text-xl mb-6 max-w-2xl mx-auto drop-shadow-lg"
+            style={{
+              animation: 'scaleUp 1s',
+              opacity: 1,
+            }}
+          >
+            {slides[current].title === 'About'
+              ? 'One person with a belief is equal to a force of ninety-nine who have only interest'
+              : slides[current].description}
+          </p>
+          <style>{`
+            @keyframes fadeSlideUp {
+              0% {
+                opacity: 0;
+                transform: translateY(5em);
+              }
+              100% {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+            @keyframes scaleUp {
+              0% {
+                opacity: 0;
+                transform: scale(0.5);
+              }
+              100% {
+                opacity: 1;
+                transform: scale(1);
+              }
+            }
+          `}</style>
         </div>
-        <p className="text-white text-lg md:text-xl mb-6 max-w-2xl mx-auto drop-shadow-lg">
-          {slides[current].title === 'About'
-            ? 'One person with a belief is equal to a force of ninety-nine who have only interest'
-            : slides[current].description}
-        </p>
         <button className="px-8 py-2 border-2 border-white rounded-full font-semibold shadow hover:bg-white hover:text-gray-900 transition mb-8">ABOUT US</button>
       </div>
       {/* Dots menu */}
@@ -58,7 +94,7 @@ const HeroSlider: React.FC = () => {
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`w-4 h-4 aspect-square rounded-full border-2 border-white !p-0 !mr-[1em] ${current === idx ? 'bg-red-600' : 'bg-transparent'} transition`}
+            className={`w-4 h-4 aspect-square rounded-full border-2 border-white !p-0 !mr-[1em] transition ${current === idx ? '!bg-red-600' : '!bg-white/30'}`}
             aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
