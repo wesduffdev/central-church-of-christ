@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
           <CountDown />
         </div>
       </section>
-        <section id="articles" className="w-full flex flex-col gap-12 py-12">
+        <section id="articles" className="w-full flex flex-col gap-12 py-12" style={{ padding: '2em' }}>
           {/* Article 1 */}
           <article className="flex flex-col md:flex-row items-center gap-8 w-full">
             <div className="w-full md:w-1/2">
@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
                 altPrefix="Article 1 image"
               />
             </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center">
+            <div className="w-full md:w-1/2 flex flex-col justify-center" style={{ padding: '2em' }}>
               <h2 className="text-2xl font-bold mb-4">Article 1 Title</h2>
               <p className="text-lg text-gray-700">This is a description for the first article. It features an AI-generated image carousel on the left and this text on the right.</p>
             </div>
@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
                 altPrefix="Article 2 image"
               />
             </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center">
+            <div className="w-full md:w-1/2 flex flex-col justify-center" style={{ padding: '2em' }}>
               <h2 className="text-2xl font-bold mb-4">Article 2 Title</h2>
               <p className="text-lg text-gray-700">This is a description for the second article. The layout is reversed and the background is light gray for even-numbered articles.</p>
             </div>
@@ -61,7 +61,7 @@ const HomePage: React.FC = () => {
                 altPrefix="Article 3 image"
               />
             </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center">
+            <div className="w-full md:w-1/2 flex flex-col justify-center" style={{ padding: '2em' }}>
               <h2 className="text-2xl font-bold mb-4">Article 3 Title</h2>
               <p className="text-lg text-gray-700">This is a description for the third article. It features an AI-generated image carousel on the left and this text on the right.</p>
             </div>
