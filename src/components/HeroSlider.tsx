@@ -44,7 +44,7 @@ const HeroSlider: React.FC = () => {
         <h3 className="text-white font-bold tracking-widest text-lg mb-4 mt-8 uppercase" style={{letterSpacing: '0.15em'}}>PUT YOUR FAITH INTO ACTION</h3>
         <div key={current} className="w-full flex flex-col items-center">
           <div
-            className="bg-red-600 px-8 py-4 rounded mb-6 inline-block"
+            className="bg-[#e57368] px-8 py-4 rounded mb-6 inline-block"
             style={{
               animation: 'fadeSlideUp 1s',
               opacity: 1,
@@ -94,7 +94,7 @@ const HeroSlider: React.FC = () => {
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`w-4 h-4 aspect-square rounded-full border-2 border-white !p-0 !mr-[1em] transition ${current === idx ? '!bg-red-600' : '!bg-white/30'}`}
+            className={`w-4 h-4 aspect-square rounded-full border-2 border-white !p-0 !mr-[1em] transition ${current === idx ? '!bg-[#e57368]' : '!bg-white/30'}`}
             aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
@@ -103,7 +103,7 @@ const HeroSlider: React.FC = () => {
       <div className="absolute bottom-6 left-0 w-full px-8 z-10">
         <div className="w-full h-2 bg-white/30 rounded-full">
           <div
-            className="h-2 bg-red-600 rounded-full transition-all duration-500"
+            className="h-2 bg-[#e57368] rounded-full transition-all duration-500"
             style={{ width: `${((current + 1) / slideCount) * 100}%` }}
           />
         </div>

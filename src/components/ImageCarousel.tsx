@@ -47,7 +47,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, altPrefix = 'Caro
             key={i}
             onClick={() => goTo(i)}
             aria-label={`Go to image ${i + 1}`}
-            className={`w-4 h-4 md:w-3 md:h-3 rounded-full mx-1 ${current === i ? 'bg-[#d4635c]' : 'bg-gray-700'}`}
+            className={`w-4 h-4 md:w-3 md:h-3 rounded-full mx-1 ${current === i ? '!bg-[#e57368]' : 'bg-gray-700'}`}
             style={{ padding: 0, marginRight: '0.5rem' }}
           />
         ))}
