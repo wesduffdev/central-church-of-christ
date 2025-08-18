@@ -4,7 +4,7 @@ import HomePage from './Pages/HomePage';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/central-church-of-christ" element={<HomePage />} />
       {/* Add more routes here as needed */}
     </Routes>
   );
