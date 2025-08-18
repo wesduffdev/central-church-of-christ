@@ -67,8 +67,8 @@ const CountDown: React.FC = () => {
         </div>
       </div>
     {/* Right side */}
-      <div className="count-down flex flex-col md:flex-row items-center bg-[#d4635c] w-full md:w-full sm:pb-[2em]">
-        <div className="count-down flex flex-row justify-start items-center space-x-8 pl-12 sm:w-full sm:justify-center" style={{marginRight: "4em"}}>
+      <div className="count-down flex flex-col md:flex-row items-center bg-[#d4635c] w-full md:w-full max-sm:pb-[2em]">
+        <div className="count-down flex flex-row justify-start items-center space-x-8 pl-12 max-sm:w-full max-sm:justify-center" style={{marginRight: "4em"}}>
           <div className="flex flex-col items-center">
             <span className="text-5xl md:text-6xl font-bold text-white">{String(timeLeft.days).padStart(2, '0')}</span>
             <span className="text-lg text-white mt-2">DAYS</span>
@@ -87,7 +87,7 @@ const CountDown: React.FC = () => {
           </div>
         </div>
         <button
-          className="bg-white text-black font-semibold px-10 py-4 rounded-full shadow text-xl md:w-[20em] sm:w-[70%] sm:mt-4"
+          className="bg-white text-black font-semibold px-10 py-4 rounded-full shadow text-xl md:w-[20em] max-sm:w-[70%] max-sm:mt-4"
           style={{ letterSpacing: '0.02em', marginRight: "2em" }}
         >
           JOIN US!
