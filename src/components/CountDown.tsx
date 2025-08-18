@@ -52,7 +52,7 @@ const CountDown: React.FC = () => {
           </svg>
           <span className="text-2xl font-semibold text-[#4ec3e0]">Next Upcoming Event</span>
         </div>
-        <div className="border-b-2 border-[#e57368] w-40 mb-2" />
+        <div className="border-b-2 border-[#e57368] w-40 mb-2 sm" />
         <div className="text-xl font-bold text-gray-900 mb-2">{event.title}</div>
         <div className="flex items-center text-gray-500 text-lg">
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#e57368" strokeWidth="2" className="mr-1">
@@ -67,8 +67,8 @@ const CountDown: React.FC = () => {
         </div>
       </div>
     {/* Right side */}
-      <div className="count-down flex items-center bg-[#d4635c] w-full md:w-full">
-        <div className="count-down flex flex-row justify-start items-center space-x-8 pl-12" style={{marginRight: "4em"}}>
+      <div className="count-down flex flex-col md:flex-row items-center bg-[#d4635c] w-full md:w-full sm:pb-[2em]">
+        <div className="count-down flex flex-row justify-start items-center space-x-8 pl-12 sm:w-full sm:justify-center" style={{marginRight: "4em"}}>
           <div className="flex flex-col items-center">
             <span className="text-5xl md:text-6xl font-bold text-white">{String(timeLeft.days).padStart(2, '0')}</span>
             <span className="text-lg text-white mt-2">DAYS</span>
@@ -87,8 +87,8 @@ const CountDown: React.FC = () => {
           </div>
         </div>
         <button
-          className="bg-white text-black font-semibold px-10 py-4 rounded-full shadow text-xl"
-          style={{ letterSpacing: '0.02em' }}
+          className="bg-white text-black font-semibold px-10 py-4 rounded-full shadow text-xl md:w-[20em] sm:w-[70%] sm:mt-4"
+          style={{ letterSpacing: '0.02em', marginRight: "2em" }}
         >
           JOIN US!
         </button>
